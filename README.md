@@ -80,7 +80,7 @@ Once you click on the button you should see the remaining screen shots.
 ##Versions:
 
 ### 1) v0.1.0
-The whole date picker functionality has been implemented, and can be installed with  `bower install ionic-toast --save`
+The whole ionic-toast functionality has been implemented, and can be installed with  `bower install ionic-toast --save`
 
 ##License:
 [MIT](https://github.com/rajeshwarpatlolla/ionic-toast/blob/master/LICENSE.MD "MIT")
