@@ -49,7 +49,7 @@ angular.module('mainModuleName', ['ionic', 'ionic-toast']){
 <button class="button button-block" ng-click="showToast()">Show Toast at top with close</button>
 ````
 
-6) In your controller you have to define a function like below
+6) In your controller you have to define a function like below to show the toast
 
 ````javascript
 $scope.showToast = function(){
@@ -69,6 +69,15 @@ c) `stick` is the third argument, which takes either `true` or `false`.
 - If the value is true, the toast will close automatically, after the given time. 
 
 d) `time` is the fourth argument, which takes time in milliseconds. If the value is greater than 5000, then it will be considered as 5000(5 seconds) only.
+
+7) In your controller you have to define a function like below to hide the toast
+
+````javascript
+$scope.showToast = function(){
+  ionicToast.hide();
+};
+````
+
 
 ##Screen Shots:
 
