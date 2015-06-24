@@ -73,7 +73,7 @@ d) `time` is the fourth argument, which takes time in milliseconds. If the value
 7) In your controller you have to define a function like below to hide the toast
 
 ````javascript
-$scope.showToast = function(){
+$scope.hideToast = function(){
   ionicToast.hide();
 };
 ````
