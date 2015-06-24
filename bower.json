@@ -4,7 +4,7 @@
   "authors": [
     "rajeshwarpatlolla <rajeshwar.patlolla@gmail.com>"
   ],
-  "description": "ionic-toast' bower component for ionic framework applications",
+  "description": "'ionic-toast' bower component for ionic framework applications",
   "main": [
     "./dist/ionic-toast.js",
     "./dist/style.css"
