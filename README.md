@@ -25,7 +25,7 @@ Give the path of  `style.css, and ionic-toast.js` in your `index.html` file.
 <link href="lib/ionic-toast/dist/style.css" rel="stylesheet"> 
 <!-- path to ionic/angularjs js -->
 <script src="lib/ionic-toast/dist/ionic-toast.js"></script>
-````    
+````
     
 3) In your application module inject the dependency `ionic-toast`, in order to work with the ionic toast.
 
@@ -43,7 +43,13 @@ angular.module('mainModuleName', ['ionic', 'ionic-toast']){
 }])
 ````
 
-5) I your controller you can use like below
+5) In your template you can use like below
+
+````html
+<button class="button button-block" ng-click="showToast()">Show Toast at top with close</button>
+````
+
+6) In your controller you have to define a function like below
 
 ````javascript
 $scope.showToast = function(){
@@ -52,7 +58,7 @@ $scope.showToast = function(){
 };
 ````
 
-The arguments are as follows. The order fo arguments should not be changed.
+The arguments are as follows. The order of arguments should not be changed.
 
 a) `message` is the first argument, which takes any string message.
 
