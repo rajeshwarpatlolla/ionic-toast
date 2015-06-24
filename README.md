@@ -89,7 +89,7 @@ Once you click on the button you should see the remaining screen shots.
 The whole `ionic-toast` component functionality has been implemented, and it can be installed with the command `bower install ionic-toast --save`
 
 ##License:
-[MIT](https://github.com/rajeshwarpatlolla/ionic-toast/blob/master/LICENSE.MD "MIT")
+[MIT](https://github.com/rajeshwarpatlolla/ionic-toast/blob/master/LICENSE.md "MIT")
 
 ##Contact:
 gmail : rajeshwar.patlolla@gmail.com
