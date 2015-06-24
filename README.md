@@ -72,10 +72,10 @@ I have used three buttons here.
 The first screen shot shows only the buttons before clicking on them.
 Once you click on the button you should see the remaining screen shots.
  
-![ionic-toast buttons](https://lh3.googleusercontent.com/-uhIkYlbcuqsZZneSPOwFoePWvhTeqRKa2kVkwN7mMI=w305-h553-no "ionic-toast buttons") 
-![ionic-toast top](https://lh3.googleusercontent.com/7iEejIcpprFmpgwWvs240Vn9Dn_Dh-R5HgtC_CJVZMs=w305-h553-no "ionic-toast top")
-![ionic-toast middle](https://lh3.googleusercontent.com/7iEejIcpprFmpgwWvs240Vn9Dn_Dh-R5HgtC_CJVZMs=w305-h553-no "ionic-toast middle")
-![ionic-toast bottom](https://lh3.googleusercontent.com/7iEejIcpprFmpgwWvs240Vn9Dn_Dh-R5HgtC_CJVZMs=w305-h553-no "ionic-toast bottom")
+![ionic-toast buttons](https://lh3.googleusercontent.com/kdX_T5jUL2ajhnOOv8BHnnBzy6jYZT9MWKCT9MR2Ur4=w382-h678-no "ionic-toast buttons") 
+![ionic-toast top](https://lh3.googleusercontent.com/0Xqax5yIKnEeiBIFEIFNuQryxcvnZxre2WEVql2eaww=w382-h678-no "ionic-toast top")
+![ionic-toast middle](https://lh3.googleusercontent.com/cdI6MeOnsh7UEkdyR1cBUYPp50wx8DKSf8l92oPcanQ=w382-h678-no "ionic-toast middle")
+![ionic-toast bottom](https://lh3.googleusercontent.com/mBXI1b-YvIiA5z5bJPNRchNaU8KPi8tHd6QuJVh0AmY=w382-h678-no "ionic-toast bottom")
 
 ##Versions:
 
