@@ -19,7 +19,7 @@ This will install the latest version released.
     
 2) Then you can see the following directory structure see in your project folder
 
-Give the path of  `style.css, templates.js and ionic-datepicker.js` in your `index.html` file.
+Give the path of  `style.css, and ionic-toast.js` in your `index.html` file.
 
 ````html
 <link href="lib/ionic-toast/dist/style.css" rel="stylesheet"> 
