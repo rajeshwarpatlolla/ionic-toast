@@ -24,7 +24,7 @@ Give the path of  `style.css, templates.js and ionic-datepicker.js` in your `ind
 ````html
 <link href="lib/ionic-toast/dist/style.css" rel="stylesheet"> 
 <!-- path to ionic/angularjs js -->
-<script src="lib/ionic-toast/dist/ionic-datepicker.js"></script>
+<script src="lib/ionic-toast/dist/ionic-toast.js"></script>
 ````    
     
 3) In your application module inject the dependency `ionic-toast`, in order to work with the ionic toast.
