@@ -38,7 +38,7 @@ angular.module('mainModuleName', ['ionic', 'ionic-toast']){
 4) In your controller, inject 'ionicToast'.
 
 ````javascript
-.controller('HomeCtrl', [$'scope', 'ionicToast', function($scope, ionicToast) {
+.controller('HomeCtrl', ['$scope', 'ionicToast', function($scope, ionicToast) {
   //code here
 }])
 ````
