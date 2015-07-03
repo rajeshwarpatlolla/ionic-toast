@@ -97,6 +97,9 @@ Once you click on the button you should see the remaining screen shots.
 ### 1) v0.1.0
 The whole `ionic-toast` component functionality has been implemented, and it can be installed with the command `bower install ionic-toast --save`
 
+### 1) v0.1.1
+Bug Fix
+
 ##License:
 [MIT](https://github.com/rajeshwarpatlolla/ionic-toast/blob/master/LICENSE.md "MIT")
 
