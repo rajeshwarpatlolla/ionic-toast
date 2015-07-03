@@ -28,6 +28,8 @@ angular.module('ionic-toast', ['ionic'])
           }
         };
 
+        var toastTimeout;
+
         var toastPosition = {
           top: 'ionic_toast_top',
           middle: 'ionic_toast_middle',
@@ -61,7 +63,7 @@ angular.module('ionic-toast', ['ionic'])
           show: function (message, position, closeBtn, duration) {
 
             if (!message || !position || !duration) return;
-
+            $timeout.cancel(toastTimeout);
             if(duration > 5000) duration = 5000;
 
             angular.extend(toastScope.ionicToast, {
@@ -72,7 +74,7 @@ angular.module('ionic-toast', ['ionic'])
             toggleDisplayOfToast('block', 1, function () {
               if (closeBtn)  return;
 
-              $timeout(function () {
+              toastTimeout = $timeout(function () {
                 toastScope.hide();
               }, duration);
             });
