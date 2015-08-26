@@ -49,13 +49,13 @@ angular.module('ionic-toast', ['ionic'])
             opacity: opacity
           };
           toastScope.ionicToast.toastStyle.opacity = opacity;
-          callback();
+          if (callback) {
+            callback();
+          }
         };
 
         toastScope.hide = function () {
-          toggleDisplayOfToast('none', 0, function () {
-            console.log('toast hidden');
-          });
+          toggleDisplayOfToast('none', 0);
         };
 
         return {
