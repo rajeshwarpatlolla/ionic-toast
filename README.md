@@ -102,9 +102,9 @@ The whole `ionic-toast` component functionality has been implemented, and it can
 Bug Fix
 
 ### 1) v0.2.0
-Lint issues fixed, Npm packages updated, Main files added in to package.json, Changes in the gulp tasks.
+Lint issues fixed, npm packages updated, main files added in the package.json, changes in the gulp tasks.
 
-JS and CSS file is combined in to one `ionic-toast.bundle.min.js` file in the dist folder.
+JS and CSS file is combined into one `ionic-toast.bundle.min.js` file in the dist folder.
 
 ##License:
 [MIT](https://github.com/rajeshwarpatlolla/ionic-toast/blob/master/LICENSE.md "MIT")
