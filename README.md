@@ -66,7 +66,7 @@ b) `position` is the second argument, which takes on of the three values(top, mi
 
 c) `stick` is the third argument, which takes either `true` or `false`.
 - If the value is true, the toast will not close automatically. It will be closed once you click on the close button.
-- If the value is true, the toast will close automatically, after the given time. 
+- If the value is false, the toast will close automatically, after the given time. 
 
 d) `time` is the fourth argument, which takes time in milliseconds. If the value is greater than 5000, then it will be considered as 5000(5 seconds) only.
 
