@@ -1,6 +1,6 @@
 {
   "name": "ionic-toast",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A toast for IONIC framework",
   "main": [
     "./dist/ionic-toast.js",
@@ -11,8 +11,8 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "del": "^2.0.2",
     "gulp": "^3.9.0",
-    "gulp-clean": "^0.3.1",
     "gulp-concat": "^2.6.0",
     "gulp-minify-css": "^1.2.1",
     "gulp-minify-html": "^1.0.4",

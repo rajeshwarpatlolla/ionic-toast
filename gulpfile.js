@@ -1,9 +1,7 @@
-var path = require('path');
 var gulp = require('gulp');
-var clean = require('gulp-clean');
+var del = require('del');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var minifyHtml = require("gulp-minify-html");
 var minifycss = require("gulp-minify-css");
 
 gulp.task('build',['cssminify'], function () {
@@ -18,9 +16,8 @@ gulp.task('cssminify', function () {
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('clean', function () {
-    return gulp.src('dist', {read: false})
-        .pipe(clean());
+gulp.task('del', function () {
+    del(['dist/*']);
 });
 
-gulp.task('default',['clean','build']);
+gulp.task('default',['del','build']);

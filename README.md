@@ -1,3 +1,5 @@
+[![bitHound Score](https://www.bithound.io/github/rajeshwarpatlolla/ionic-toast/badges/score.svg)](https://www.bithound.io/github/rajeshwarpatlolla/ionic-toast)
+
 ##Introduction:
 
 This is an `ionic-toast` bower component which can be used with any Ionic framework's application.
@@ -99,6 +101,15 @@ The whole `ionic-toast` component functionality has been implemented, and it can
 
 ### 1) v0.1.1
 Bug Fix
+
+### 1) v0.1.2
+Lint issues fixed
+
+Npm packages updated
+
+Main files added in to package.json
+
+Changes in the gulp tasks
 
 ##License:
 [MIT](https://github.com/rajeshwarpatlolla/ionic-toast/blob/master/LICENSE.md "MIT")
