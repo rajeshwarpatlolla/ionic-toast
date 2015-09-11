@@ -54,7 +54,7 @@ angular.module('ionic-toast', ['ionic'])
 
         toastScope.hide = function () {
           toggleDisplayOfToast('none', 0, function () {
-            console.log('toast hidden');
+            // console.log('toast hidden');
           });
         };
 
