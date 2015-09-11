@@ -13,13 +13,13 @@ This is an `ionic-toast` bower component which can be used with any Ionic framew
 
 ##How to use:
 
-1) In your project repository install the ionic-toast using bower
+**1)** In your project repository install the ionic-toast using bower
 
     bower install ionic-toast --save
 
 This will install the latest version released.
     
-2) Then you can see the following directory structure see in your project folder
+**2)** Then you can see the following directory structure see in your project folder
 
 Give the path of  `style.css, and ionic-toast.js` in your `index.html` file.
 
@@ -28,7 +28,7 @@ Give the path of  `style.css, and ionic-toast.js` in your `index.html` file.
 <script src="lib/ionic-toast/dist/ionic-toast.bundle.min.js"></script>
 ````
     
-3) In your application module inject the dependency `ionic-toast`, in order to work with the ionic toast.
+**3)** In your application module inject the dependency `ionic-toast`, in order to work with the ionic toast.
 
 ````javascript
 angular.module('mainModuleName', ['ionic', 'ionic-toast']){
@@ -36,7 +36,7 @@ angular.module('mainModuleName', ['ionic', 'ionic-toast']){
 }
 ````
 
-4) In your controller, inject 'ionicToast'.
+**4)** In your controller, inject 'ionicToast'.
 
 ````javascript
 .controller('HomeCtrl', ['$scope', 'ionicToast', function($scope, ionicToast) {
@@ -44,13 +44,13 @@ angular.module('mainModuleName', ['ionic', 'ionic-toast']){
 }])
 ````
 
-5) In your template you can use like below
+**5)** In your template you can use like below
 
 ````html
 <button class="button button-block" ng-click="showToast()">Show Toast at top with close</button>
 ````
 
-6) In your controller you have to define a function like below to show the toast
+**6)** In your controller you have to define a function like below to show the toast
 
 ````javascript
 $scope.showToast = function(){
@@ -71,7 +71,7 @@ c) `stick` is the third argument, which takes either `true` or `false`.
 
 d) `time` is the fourth argument, which takes time in milliseconds. If the value is greater than 5000, then it will be considered as 5000(5 seconds) only.
 
-7) In your controller you have to define a function like below to hide the toast
+**7)** In your controller you have to define a function like below to hide the toast
 
 ````javascript
 $scope.hideToast = function(){
