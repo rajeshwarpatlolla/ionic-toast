@@ -24,9 +24,8 @@ This will install the latest version released.
 Give the path of  `style.css, and ionic-toast.js` in your `index.html` file.
 
 ````html
-<link href="lib/ionic-toast/dist/style.css" rel="stylesheet"> 
-<!-- path to ionic/angularjs js -->
-<script src="lib/ionic-toast/dist/ionic-toast.js"></script>
+<!-- path to ionic / angularjs files-->
+<script src="lib/ionic-toast/dist/ionic-toast.bundle.min.js"></script>
 ````
     
 3) In your application module inject the dependency `ionic-toast`, in order to work with the ionic toast.
