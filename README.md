@@ -1,3 +1,5 @@
+[![bitHound Score](https://www.bithound.io/github/rajeshwarpatlolla/ionic-toast/badges/score.svg)](https://www.bithound.io/github/rajeshwarpatlolla/ionic-toast)
+
 ##Introduction:
 
 This is an `ionic-toast` bower component which can be used with any Ionic framework's application.
@@ -11,23 +13,22 @@ This is an `ionic-toast` bower component which can be used with any Ionic framew
 
 ##How to use:
 
-1) In your project repository install the ionic-toast using bower
+**1)** In your project repository install the ionic-toast using bower
 
     bower install ionic-toast --save
 
 This will install the latest version released.
     
-2) Then you can see the following directory structure see in your project folder
+**2)** Then you can see the following directory structure see in your project folder
 
 Give the path of  `style.css, and ionic-toast.js` in your `index.html` file.
 
 ````html
-<link href="lib/ionic-toast/dist/style.css" rel="stylesheet"> 
-<!-- path to ionic/angularjs js -->
-<script src="lib/ionic-toast/dist/ionic-toast.js"></script>
+<!-- path to ionic / angularjs files-->
+<script src="lib/ionic-toast/dist/ionic-toast.bundle.min.js"></script>
 ````
     
-3) In your application module inject the dependency `ionic-toast`, in order to work with the ionic toast.
+**3)** In your application module inject the dependency `ionic-toast`, in order to work with the ionic toast.
 
 ````javascript
 angular.module('mainModuleName', ['ionic', 'ionic-toast']){
@@ -35,7 +36,7 @@ angular.module('mainModuleName', ['ionic', 'ionic-toast']){
 }
 ````
 
-4) In your controller, inject 'ionicToast'.
+**4)** In your controller, inject 'ionicToast'.
 
 ````javascript
 .controller('HomeCtrl', ['$scope', 'ionicToast', function($scope, ionicToast) {
@@ -43,13 +44,13 @@ angular.module('mainModuleName', ['ionic', 'ionic-toast']){
 }])
 ````
 
-5) In your template you can use like below
+**5)** In your template you can use like below
 
 ````html
 <button class="button button-block" ng-click="showToast()">Show Toast at top with close</button>
 ````
 
-6) In your controller you have to define a function like below to show the toast
+**6)** In your controller you have to define a function like below to show the toast
 
 ````javascript
 $scope.showToast = function(){
@@ -66,11 +67,11 @@ b) `position` is the second argument, which takes on of the three values(top, mi
 
 c) `stick` is the third argument, which takes either `true` or `false`.
 - If the value is true, the toast will not close automatically. It will be closed once you click on the close button.
-- If the value is true, the toast will close automatically, after the given time. 
+- If the value is false, the toast will close automatically, after the given time. 
 
 d) `time` is the fourth argument, which takes time in milliseconds. If the value is greater than 5000, then it will be considered as 5000(5 seconds) only.
 
-7) In your controller you have to define a function like below to hide the toast
+**7)** In your controller you have to define a function like below to hide the toast
 
 ````javascript
 $scope.hideToast = function(){
@@ -100,6 +101,11 @@ The whole `ionic-toast` component functionality has been implemented, and it can
 ### 1) v0.1.1
 Bug Fix
 
+### 1) v0.2.0
+Lint issues fixed, npm packages updated, main files added in the package.json, changes in the gulp tasks.
+
+JS and CSS file is combined into one `ionic-toast.bundle.min.js` file in the dist folder.
+
 ##License:
 [MIT](https://github.com/rajeshwarpatlolla/ionic-toast/blob/master/LICENSE.md "MIT")
 
@@ -113,3 +119,5 @@ twitter : https://twitter.com/rajeshwar_9032
 facebook : https://www.facebook.com/rajeshwarpatlolla
 
 paypal : rajeshwar.patlolla@gmail.com
+
+Rate / Comment : http://market.ionic.io/plugins/ionictoast

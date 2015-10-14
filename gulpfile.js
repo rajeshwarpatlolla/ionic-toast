@@ -1,10 +1,8 @@
-var path = require('path');
 var gulp = require('gulp');
-var clean = require('gulp-clean');
+var del = require('del');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var minifyHtml = require("gulp-minify-html");
-var minifycss = require("gulp-minify-css");
+var css2js = require("gulp-css2js");
 
 gulp.task('build',['cssminify'], function () {
     gulp.src(['./src/ionic-toast.js'])
@@ -12,15 +10,25 @@ gulp.task('build',['cssminify'], function () {
         .pipe(gulp.dest("./dist"));
 });
 
-gulp.task('cssminify', function () {
-    return gulp.src('./src/*.css')
-        .pipe(minifycss())
-        .pipe(gulp.dest('./dist'));
+gulp.task('css2js', function () {
+    return gulp.src("./src/*.css")
+      .pipe(css2js())
+      .pipe(gulp.dest("./dist/"));
 });
 
-gulp.task('clean', function () {
-    return gulp.src('dist', {read: false})
-        .pipe(clean());
+gulp.task('del', function () {
+    del(['dist/*']);
 });
 
-gulp.task('default',['clean','build']);
+gulp.task('make-bundle', ['del', 'css2js'], function () {
+    return gulp.src(['dist/*', './src/*.js'])
+      .pipe(concat('ionic-toast.bundle.min.js'))
+      .pipe(uglify())
+      .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('del-temp-files', ['make-bundle'], function () {
+    del(['dist/style.js']);
+});
+
+gulp.task('build', ['del-temp-files']);
