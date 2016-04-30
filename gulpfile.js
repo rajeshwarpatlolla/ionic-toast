@@ -17,18 +17,18 @@ gulp.task('css2js', function () {
 });
 
 gulp.task('del', function () {
-    del(['dist/*']);
+    del(['./dist/*']);
 });
 
 gulp.task('make-bundle', ['del', 'css2js'], function () {
-    return gulp.src(['dist/*', './src/*.js'])
+    return gulp.src(['./dist/*', './src/*.js'])
       .pipe(concat('ionic-toast.bundle.min.js'))
       .pipe(uglify())
-      .pipe(gulp.dest('dist/'));
+      .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('del-temp-files', ['make-bundle'], function () {
-    del(['dist/style.js']);
+    del(['./dist/style.js']);
 });
 
 gulp.task('build', ['del-temp-files']);
