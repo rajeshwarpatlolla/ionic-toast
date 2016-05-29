@@ -1,13 +1,12 @@
 {
   "name": "ionic-toast",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "authors": [
     "rajeshwarpatlolla <rajeshwar.patlolla@gmail.com>"
   ],
   "description": "'ionic-toast' bower component for ionic framework applications",
   "main": [
-    "./dist/ionic-toast.js",
-    "./dist/style.css"
+    "./dist/ionic-toast.bundle.min.js"
   ],
   "keywords": [
     "ionic-toast",

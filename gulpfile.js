@@ -28,7 +28,7 @@ gulp.task('make-bundle', ['del', 'css2js'], function () {
 });
 
 gulp.task('del-temp-files', ['make-bundle'], function () {
-    del(['./dist/style.js']);
+    del(['./dist/style.js','./dist/ionic-toast.js']);
 });
 
 gulp.task('build', ['del-temp-files']);
