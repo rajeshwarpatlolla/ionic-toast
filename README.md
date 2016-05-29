@@ -98,11 +98,14 @@ Once you click on the button you should see the remaining screen shots.
 ### 1) v0.1.0
 The whole `ionic-toast` component functionality has been implemented, and it can be installed with the command `bower install ionic-toast --save`
 
-### 1) v0.1.1
+### 2) v0.1.1
 Bug Fix
 
-### 1) v0.2.0
+### 3) v0.2.0
 Lint issues fixed, npm packages updated, main files added in the package.json, changes in the gulp tasks.
+
+### 4) v0.2.1
+Code modularity implemented, npm packages updated.
 
 JS and CSS file is combined into one `ionic-toast.bundle.min.js` file in the dist folder.
 
