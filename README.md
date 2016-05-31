@@ -19,9 +19,7 @@ This is an `ionic-toast` bower component which can be used with any Ionic framew
 
 This will install the latest version released.
     
-**2)** Then you can see the following directory structure see in your project folder
-
-Give the path of  `style.css, and ionic-toast.js` in your `index.html` file.
+**2)** Give the path of `ionic-toast.bundle.min.js` in your `index.html` file.
 
 ````html
 <!-- path to ionic / angularjs files-->
@@ -36,7 +34,7 @@ angular.module('mainModuleName', ['ionic', 'ionic-toast']){
 }
 ````
 
-**4)** In your controller, inject 'ionicToast'.
+**4)** Inject 'ionicToast' in your controller.
 
 ````javascript
 .controller('HomeCtrl', ['$scope', 'ionicToast', function($scope, ionicToast) {
@@ -44,7 +42,7 @@ angular.module('mainModuleName', ['ionic', 'ionic-toast']){
 }])
 ````
 
-**5)** In your template you can use like below
+**5)** In your template, you can use like below
 
 ````html
 <button class="button button-block" ng-click="showToast()">Show Toast at top with close</button>
@@ -63,13 +61,13 @@ The arguments are as follows. The order of arguments should not be changed.
 
 a) `message` is the first argument, which takes any string message.
 
-b) `position` is the second argument, which takes on of the three values(top, middle, bottom).
+b) `position`(Optional) is the second argument, which takes on of the three values(top, middle, bottom). default position is `top`. 
 
-c) `stick` is the third argument, which takes either `true` or `false`.
+c) `stick`(Optional) is the third argument, which takes either `true` or `false`. Default value is false.
 - If the value is true, the toast will not close automatically. It will be closed once you click on the close button.
 - If the value is false, the toast will close automatically, after the given time. 
 
-d) `time` is the fourth argument, which takes time in milliseconds. If the value is greater than 5000, then it will be considered as 5000(5 seconds) only.
+d) `timeout`(Optional) is the fourth argument, which takes time in milliseconds. If the value is greater than 5000, then it will be considered as 5000(5 seconds) only. The default value is 4000 milli seconds.
 
 **7)** In your controller you have to define a function like below to hide the toast
 
