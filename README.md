@@ -102,7 +102,7 @@ Bug Fix
 ### 3) v0.2.0
 Lint issues fixed, npm packages updated, main files added in the package.json, changes in the gulp tasks.
 
-### 4) v0.2.1
+### 4) v0.3.0
 Code modularity implemented, npm packages updated.
 
 JS and CSS file is combined into one `ionic-toast.bundle.min.js` file in the dist folder.
