@@ -55,7 +55,7 @@
 }
 
 .ionic_toast_close:active {
-  background-color: #555555;
+  /*background-color: #555555;*/
 }
 .toast_no_transition {
   -webkit-transition: none !important;
