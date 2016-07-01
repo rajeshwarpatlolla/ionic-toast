@@ -12,7 +12,7 @@
   left: 0;
   right: 0;
   text-align: center;
-  z-index: 9999;
+  z-index: 9999999;
   background: rgba(0, 0, 0, 0.80);
 }
 .ionic_toast.positive{
