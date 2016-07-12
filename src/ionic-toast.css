@@ -7,21 +7,16 @@
   border-radius: 2px;
   opacity: 1;
   padding: 10px 25px;
-  margin: 0px;
+  margin: 10px;
   position: fixed;
   left: 0;
   right: 0;
   text-align: center;
-  z-index: 9999999;
-  background: rgba(0, 0, 0, 0.80);
-}
-.ionic_toast.positive{
-  /*background-color:#0c60ee;*/
+  z-index: 9999;
 }
 
 .ionic_toast_top {
-  top: 0px;
-  transform:translate3d(0,-100%,0);
+  top: 10px;
 }
 
 .ionic_toast_middle {
@@ -29,15 +24,14 @@
 }
 
 .ionic_toast_bottom {
-  bottom: 0px;
-  transform:translate3d(0,100%,0);
+  bottom: 10px;
 }
 
 .ionic_toast_close {
   border-radius: 2px;
   color: #CCCCCC;
   cursor: pointer;
-  /*display: none;*/
+  display: none;
   position: absolute;
   right: 4px;
   top: 4px;
@@ -55,11 +49,5 @@
 }
 
 .ionic_toast_close:active {
-  /*background-color: #555555;*/
-}
-.toast_no_transition {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -o-transition: none !important;
-  transition: none !important;
+  
 }
