@@ -11,5 +11,9 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "del": "^2.2.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-css2js": "^1.0.2",
+    "gulp-uglify": "^1.5.3"
   }
 }
