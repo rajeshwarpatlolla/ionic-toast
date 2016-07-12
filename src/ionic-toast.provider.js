@@ -26,8 +26,8 @@ angular.module('ionic-toast.provider', [])
           toastClass: '',
           toastMessage: '',
           toastStyle: {
-            display: 'none',
-            opacity: 0
+            // display: 'none',
+            // opacity: 0
           }
         };
 
@@ -43,22 +43,14 @@ angular.module('ionic-toast.provider', [])
 
         $document.find('body').append(toastTemplate);
 
-        var toggleDisplayOfToast = function (display, opacity, callback) {
-          $scope.ionicToast.toastStyle = {
-            display: display,
-            opacity: opacity
-          };
-          $scope.ionicToast.toastStyle.opacity = opacity;
-          callback();
-        };
-
         $scope.hideToast = function () {
-          toggleDisplayOfToast('none', 0, function () {
-            //console.log('toast hidden');
-          });
+          delete $scope.ionicToast.toastStyle.transform;
+          $timeout(function(){
+            delete $scope.ionicToast.toastStyle.transition;
+          },600);
         };
 
-        provider.show = function (message, position, isSticky, duration) {
+        provider.show = function (message, position, isSticky, duration, customClass) {
           //console.log(message, position, isSticky, duration, defaultConfig);
 
           if (!message) return;
@@ -71,18 +63,23 @@ angular.module('ionic-toast.provider', [])
             toastClass: toastPosition[position] + ' ' + (isSticky ? 'ionic_toast_sticky' : ''),
             toastMessage: message
           });
+          
+          element = document.getElementById("ionic_toast");
+          element.className = 'ionic_toast ' + toastPosition[position] + ' ' + (isSticky ? 'ionic_toast_sticky' : '');
+          if(customClass)
+            element.className += " " + customClass;
 
-          toggleDisplayOfToast('block', 1, function () {
-            if (isSticky)  return;
+          $timeout(function () {
+            $scope.ionicToast.toastStyle = {
+              transform: "translate3d(0,0,0)",
+              transition: ".5s transform"
+            };
+          }, 30);
 
-            toastTimer = $timeout(function () {
-              $scope.hideToast();
-            }, duration);
-          });
-        };
+          $timeout(function () {
+            $scope.hideToast();
+          }, duration)
 
-        provider.hide = function () {
-          $scope.hideToast();
         };
 
         return provider;
