@@ -105,6 +105,9 @@ Lint issues fixed, npm packages updated, main files added in the package.json, c
 ### 4) v0.3.0
 Code modularity implemented, npm packages updated.
 
+### 5) v0.4.0
+Bug fix.
+
 JS and CSS file is combined into one `ionic-toast.bundle.min.js` file in the dist folder.
 
 ##License:
