@@ -17,7 +17,7 @@ This is an `ionic-toast` bower component which can be used with any Ionic framew
 
     bower install ionic-toast --save
 
-This will install the latest version released.
+This will install the latest version released. If you wish to install a specific version please use `bower install ionic-toast#<version number>`
     
 **2)** Give the path of `ionic-toast.bundle.min.js` in your `index.html` file.
 
@@ -105,10 +105,10 @@ Lint issues fixed, npm packages updated, main files added in the package.json, c
 ### 4) v0.3.0
 Code modularity implemented, npm packages updated.
 
+JS and CSS file is combined into one `ionic-toast.bundle.min.js` file in the dist folder.
+
 ### 5) v0.4.0
 Bug fix.
-
-JS and CSS file is combined into one `ionic-toast.bundle.min.js` file in the dist folder.
 
 ##License:
 [MIT](https://github.com/rajeshwarpatlolla/ionic-toast/blob/master/LICENSE.md "MIT")
