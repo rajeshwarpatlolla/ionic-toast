@@ -12,6 +12,7 @@
   left: 0;
   right: 0;
   text-align: center;
+  background: rgba(0, 0, 0, 0.80);
   z-index: 9999;
 }
 
