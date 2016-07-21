@@ -1,19 +1,23 @@
 
 .ionic_toast {
+  z-index: 9999;
+}
+
+.toast_section {
   color: #FFF;
   cursor: default;
   font-size: 1em;
-  /*display: none;*/
-  border-radius: 2px;
+  display: none;
+  border-radius: 5px;
   opacity: 1;
-  padding: 10px 25px;
+  padding: 10px 30px 10px 10px;
   margin: 10px;
   position: fixed;
   left: 0;
   right: 0;
   text-align: center;
-  background: rgba(0, 0, 0, 0.80);
   z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .ionic_toast_top {
@@ -50,5 +54,5 @@
 }
 
 .ionic_toast_close:active {
-  
+
 }
