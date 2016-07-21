@@ -111,7 +111,7 @@ JS and CSS file is combined into one `ionic-toast.bundle.min.js` file in the dis
 Bug fix.
 
 ### 5) v0.4.1
-Missing background color added.
+[Issue#21](https://github.com/rajeshwarpatlolla/ionic-toast/issues/21)
 
 
 ##License:
