@@ -67,7 +67,7 @@ c) `stick`(Optional) is the third argument, which takes either `true` or `false`
 - If the value is true, the toast will not close automatically. It will be closed once you click on the close button.
 - If the value is false, the toast will close automatically, after the given time. 
 
-d) `timeout`(Optional) is the fourth argument, which takes time in milliseconds. If the value is greater than 5000, then it will be considered as 5000(5 seconds) only. The default value is 4000 milli seconds.
+d) `timeout`(Optional) is the fourth argument, which takes time in milliseconds. If the value is greater than 10000, then it will be considered as 10000(10 seconds) only. The default value is 4000 milli seconds.
 
 **7)** In your controller you have to define a function like below to hide the toast
 
