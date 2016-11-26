@@ -2,7 +2,7 @@
 
 ##Introduction:
 
-This is an `ionic-toast` bower component which can be used with any Ionic framework's application.
+This is an `ionic-toast` component which can be used with any Ionic framework's application.
 
 [View Demo](http://rajeshwarpatlolla.github.io/ionic-toast-demo/demo/ "Demo") 
 
