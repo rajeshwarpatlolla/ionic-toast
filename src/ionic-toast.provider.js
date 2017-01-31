@@ -72,7 +72,7 @@ angular.module('ionic-toast.provider', [])
 
           toggleDisplayOfToast('block', 1, function () {
             if (isSticky)  return;
-
+            $timeout.cancel(toastTimer);
             toastTimer = $timeout(function () {
               $scope.hideToast();
             }, duration);
