@@ -1,16 +1,29 @@
 {
   "name": "ionic-toast",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "A toast for IONIC framework",
   "main": "./dist/ionic-toast.bundle.min.js",
-  "scripts": {},
-  "author": "https://github.com/rajeshwarpatlolla, rajeshwar.patlolla@gmail.com",
+  "scripts": {
+    "setup": "npm install && bower install && gulp make-bundle",
+    "make-bundle": "gulp make-bundle"
+  },
+  "author": {
+    "name": "https://github.com/rajeshwarpatlolla, rajeshwar.patlolla@gmail.com"
+  },
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "del": "^2.2.0",
+    "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-css2js": "^1.0.2",
     "gulp-uglify": "^1.5.3"
-  }
+  },
+  "gitHead": "8242a5c2abf7d6126f1ade0f9194df64b54758ae",
+  "readme": "[![bitHound Score](https://www.bithound.io/github/rajeshwarpatlolla/ionic-toast/badges/score.svg)](https://www.bithound.io/github/rajeshwarpatlolla/ionic-toast)\n\n## Introduction:\n\nThis is an `ionic-toast` bower component which can be used with any Ionic framework's application.\n\n[View Demo](http://rajeshwarpatlolla.github.io/ionic-toast-demo/demo/ \"Demo\")\n\n\n## Prerequisites.\n\n**1)** node.js, bower and gulp.\n\n## How to use:\n\n**1)** In your project repository install the ionic-toast using bower\n\n    bower install ionic-toast --save\n\nThis will install the latest version released. If you wish to install a specific version please use `bower install ionic-toast#<version number>`\n\n**2)** Give the path of `ionic-toast.bundle.min.js` in your `index.html` file.\n\n````html\n<!-- path to ionic / angularjs files-->\n<script src=\"lib/ionic-toast/dist/ionic-toast.bundle.min.js\"></script>\n````\n\n**3)** In your application module inject the dependency `ionic-toast`, in order to work with the ionic toast.\n\n````javascript\nangular.module('mainModuleName', ['ionic', 'ionic-toast']){\n //\n}\n````\n\n**4)** Inject 'ionicToast' in your controller.\n\n````javascript\n.controller('HomeCtrl', ['$scope', 'ionicToast', function($scope, ionicToast) {\n  //code here\n}])\n````\n\n**5)** In your template, you can use like below\n\n````html\n<button class=\"button button-block\" ng-click=\"showToast()\">Show Toast at top with close</button>\n````\n\n**6)** In your controller you have to define a function like below to show the toast\n\n````javascript\n$scope.showToast = function(){\n<!-- ionicToast.show(message, position, stick, time); -->\n  ionicToast.show('This is a toast at the top.', 'top', true, 2500);\n};\n````\n\nThe arguments are as follows. The order of arguments should not be changed.\n\na) `message` is the first argument, which takes any string message.\n\nb) `position`(Optional) is the second argument, which takes on of the three values(top, middle, bottom). default position is `top`.\n\nc) `stick`(Optional) is the third argument, which takes either `true` or `false`. Default value is false.\n- If the value is true, the toast will not close automatically. It will be closed once you click on the close button.\n- If the value is false, the toast will close automatically, after the given time.\n\nd) `timeout`(Optional) is the fourth argument, which takes time in milliseconds. If the value is greater than 5000, then it will be considered as 5000(5 seconds) only. The default value is 4000 milli seconds.\n\ne) `background`(Optional) is the fifth argument, which takes the background color in hexadecimal, rgb() or rgba(). If the value is null the background color is `rgba(0, 0, 0, 0.75)`.\n\n**7)** In your controller you have to define a function like below to hide the toast\n\n````javascript\n$scope.hideToast = function(){\n  ionicToast.hide();\n};\n````\n\n\n## Screen Shots:\n\nOnce you are successfully done with the above steps, you should be able to see the below screen shots.\nI have used three buttons here.\n\nThe first screen shot shows only the buttons before clicking on them.\nOnce you click on the button you should see the remaining screen shots.\n\n![ionic-toast buttons](https://lh3.googleusercontent.com/Fc4fUe9_k6DktTMoNrpih_z5sSNoZs9XHuiyn4AcClw=w320-h568-no \"ionic-toast buttons\")\n![ionic-toast top](https://lh3.googleusercontent.com/VDO5p9Z9KH6tC7zpTTk6mbkchKKBA4VYWpZuqLp9Jzc=w320-h568-no \"ionic-toast top\")\n![ionic-toast middle](https://lh3.googleusercontent.com/J7n3YRhRx68hIQmKLRJEKq6QfkxkAD7y_Jqc9eFDOtk=w320-h568-no \"ionic-toast middle\")\n![ionic-toast bottom](https://lh3.googleusercontent.com/MQyAFN9S8d8Pd05XALFcuhPiY_LNlKEIS9yWh-WKTh0=w320-h568-no \"ionic-toast bottom\")\n\n## Versions:\n\n### 1) v0.1.0\nThe whole `ionic-toast` component functionality has been implemented, and it can be installed with the command `bower install ionic-toast --save`\n\n### 2) v0.1.1\nBug Fix\n\n### 3) v0.2.0\nLint issues fixed, npm packages updated, main files added in the package.json, changes in the gulp tasks.\n\n### 4) v0.3.0\nCode modularity implemented, npm packages updated.\n\nJS and CSS file is combined into one `ionic-toast.bundle.min.js` file in the dist folder.\n\n### 5) v0.4.0\nBug fix.\n\n### 6) v0.4.1\n[Issue#21](https://github.com/rajeshwarpatlolla/ionic-toast/issues/21)\n\n\n## License:\n[MIT](https://github.com/rajeshwarpatlolla/ionic-toast/blob/master/LICENSE.md \"MIT\")\n\n## Contact:\ngmail : rajeshwar.patlolla@gmail.com\n\ngithub : https://github.com/rajeshwarpatlolla\n\ntwitter : https://twitter.com/rajeshwar_9032\n\nfacebook : https://www.facebook.com/rajeshwarpatlolla\n\npaypal : rajeshwar.patlolla@gmail.com\n\nRate / Comment : http://market.ionic.io/plugins/ionictoast\n",
+  "readmeFilename": "README.md",
+  "_id": "ionic-toast@0.4.2",
+  "_shasum": "714d0d3af1fd920c2a84b96db080bf55b86297f1",
+  "_from": "git+ssh://git@github.com/cubyn/ionic-toast.git",
+  "_resolved": "git+ssh://git@github.com/cubyn/ionic-toast.git#8242a5c2abf7d6126f1ade0f9194df64b54758ae"
 }
