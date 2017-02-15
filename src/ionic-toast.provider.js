@@ -1,28 +1,21 @@
 'use strict';
+
 angular.module('ionic-toast.provider', [])
-
   .provider('ionicToast', function () {
-
     var defaultConfig = {
       position: 'top',
       showClose: false,
       theme: 'dark',
       timeOut: 4000,
-      backgroundToast: 'rgba(0, 0, 0, 0.75)'
+      backgroundClass: 'rgba(0, 0, 0, 0.75)'
     };
 
     this.configure = function (inputObj) {
       angular.extend(defaultConfig, inputObj);
     };
 
-    function validateColor(color) {
-      var regex = /^(?:#(?:[A-Fa-f0-9]{3}){1,2}|(?:rgb[(](?:\s*0*(?:\d\d?(?:\.\d+)?(?:\s*%)?|\.\d+\s*%|100(?:\.0*)?\s*%|(?:1\d\d|2[0-4]\d|25[0-5])(?:\.\d+)?)\s*(?:,(?![)])|(?=[)]))){3}|hsl[(]\s*0*(?:[12]?\d{1,2}|3(?:[0-5]\d|60))\s*(?:\s*,\s*0*(?:\d\d?(?:\.\d+)?\s*%|\.\d+\s*%|100(?:\.0*)?\s*%)){2}\s*|(?:rgba[(](?:\s*0*(?:\d\d?(?:\.\d+)?(?:\s*%)?|\.\d+\s*%|100(?:\.0*)?\s*%|(?:1\d\d|2[0-4]\d|25[0-5])(?:\.\d+)?)\s*,){3}|hsla[(]\s*0*(?:[12]?\d{1,2}|3(?:[0-5]\d|60))\s*(?:\s*,\s*0*(?:\d\d?(?:\.\d+)?\s*%|\.\d+\s*%|100(?:\.0*)?\s*%)){2}\s*,)\s*0*(?:\.\d+|1(?:\.0*)?)\s*)[)])$/gm;
-      return regex.exec(color);
-    };
-
     this.$get = ['$compile', '$document', '$interval', '$rootScope', '$templateCache', '$timeout',
       function ($compile, $document, $interval, $rootScope, $templateCache, $timeout) {
-
         var provider = {};
         var $scope = $rootScope.$new();
         var toastTimer = defaultConfig.timeOut;
@@ -48,40 +41,45 @@ angular.module('ionic-toast.provider', [])
 
         $document.find('body').append(toastTemplate);
 
-        var toggleDisplayOfToast = function (display, opacity, background, callback) {
+        var toggleDisplayOfToast = function (display, opacity, callback) {
           $scope.ionicToast.toastStyle = {
             display: display,
             opacity: opacity,
-            'background-color': background
           };
+
           $scope.ionicToast.toastStyle.opacity = opacity;
+
           callback();
         };
 
         $scope.hideToast = function () {
-          toggleDisplayOfToast('none', 0, null, function () {
+          toggleDisplayOfToast('none', 0, function () {
           });
         };
 
-        provider.show = function (message, position, isSticky, duration, background) {
-
+        provider.show = function (message, position, isSticky, duration, backgroundClass) {
           if (!message) return;
+
           position = position || defaultConfig.position;
           duration = duration || defaultConfig.timeOut;
 
           if (duration > 10000) duration = 10000;
 
-          if (!validateColor(background)) {
-            background = defaultConfig.backgroundToast;
+
+          if (!backgroundClass) {
+            backgroundClass = defaultConfig.backgroundClass;
           }
+
           angular.extend($scope.ionicToast, {
-            toastClass: toastPosition[position] + ' ' + (isSticky ? 'ionic_toast_sticky' : ''),
+            toastClass: toastPosition[position] + ' ' + (isSticky ? 'ionic_toast_sticky' : '') + ' ' + backgroundClass,
             toastMessage: message
           });
 
-          toggleDisplayOfToast('block', 1, background, function () {
+          toggleDisplayOfToast('block', 1, function () {
             if (isSticky)  return;
+
             $timeout.cancel(toastTimer);
+
             toastTimer = $timeout(function () {
               $scope.hideToast();
             }, duration);
@@ -93,9 +91,6 @@ angular.module('ionic-toast.provider', [])
         };
 
         return provider;
-
       }
-
-
     ];
   });
