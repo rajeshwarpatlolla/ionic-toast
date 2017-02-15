@@ -21,41 +21,41 @@ This will install the latest version released. If you wish to install a specific
 
 **2)** Give the path of `ionic-toast.bundle.min.js` in your `index.html` file.
 
-````html
+```html
 <!-- path to ionic / angularjs files-->
 <script src="lib/ionic-toast/dist/ionic-toast.bundle.min.js"></script>
-````
+```
 
 **3)** In your application module inject the dependency `ionic-toast`, in order to work with the ionic toast.
 
-````javascript
+```javascript
 angular.module('mainModuleName', ['ionic', 'ionic-toast']){
  //
 }
-````
+```
 
 **4)** Inject 'ionicToast' in your controller.
 
-````javascript
+```javascript
 .controller('HomeCtrl', ['$scope', 'ionicToast', function($scope, ionicToast) {
   //code here
 }])
-````
+```
 
 **5)** In your template, you can use like below
 
-````html
+```html
 <button class="button button-block" ng-click="showToast()">Show Toast at top with close</button>
-````
+```
 
 **6)** In your controller you have to define a function like below to show the toast
 
-````javascript
+```javascript
 $scope.showToast = function(){
 <!-- ionicToast.show(message, position, stick, time); -->
   ionicToast.show('This is a toast at the top.', 'top', true, 2500);
 };
-````
+```
 
 The arguments are as follows. The order of arguments should not be changed.
 
@@ -69,15 +69,25 @@ c) `stick`(Optional) is the third argument, which takes either `true` or `false`
 
 d) `timeout`(Optional) is the fourth argument, which takes time in milliseconds. If the value is greater than 5000, then it will be considered as 5000(5 seconds) only. The default value is 4000 milli seconds.
 
-e) `background`(Optional) is the fifth argument, which takes the background color in hexadecimal, rgb() or rgba(). If the value is null the background color is `rgba(0, 0, 0, 0.75)`.
+
+e) `backgroundClass`(Optional) is the fifth argument, which takes the background css class. Usefull to set a background color. If the value is null the background color will be `rgba(0, 0, 0, 0.75)`.
+
+```javascript
+ionicToast.show('error message', 'bottom', false, 5000, 'toast_background_error');
+```
+```css
+.toast_background_error {
+    background-color: rgba(231, 76, 60, 1) !important;
+}
+```
 
 **7)** In your controller you have to define a function like below to hide the toast
 
-````javascript
+```javascript
 $scope.hideToast = function(){
   ionicToast.hide();
 };
-````
+```
 
 
 ## Screen Shots:
